@@ -1,0 +1,33 @@
+{
+  "name": "test-exif",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf bin",
+    "compile": "mkdir bin && babel src -o bin/main.js --source-maps",
+    "assets": "cp -R assets bin/assets",
+    "build": "npm run clean && npm run compile && npm run assets",
+    "start": "node bin/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerrykimrusso/test-exif.git"
+  },
+  "author": "Kerry Kim Russo <kerry.kim.russo@gmail.com> (http://kerryrusso.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kerrykimrusso/test-exif/issues"
+  },
+  "homepage": "https://github.com/kerrykimrusso/test-exif#readme",
+  "dependencies": {
+    "exif": "0.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "rimraf": "2.6.2"
+  }
+}
